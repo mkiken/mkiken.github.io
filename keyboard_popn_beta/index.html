@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Keyboard Popn Beta</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/icon.png">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- <link rel="stylesheet" href="styles/main.css"> -->
+  <style type="text/css">
+  canvas { background-color:#000;
+    border: 1px solid #999;
+    opacity: 0.5; }
+  .perfect {color: green; }
+  .good {color: blue;}
+  .bad {color: red;}
+  .miss {color: yellow;}
+  .out {
+    opacity: 0.5;
+  }
+  .in {
+    opacity: 0.8;
+  }
+  table#main {
+    background-color: gray;
+  }
+
+  </style>
+</head>
+<!-- <body onload="init();"> -->
+<body>
+  <h1>Keyboard Pop'n Beta</h1>
+  <h2>簡単なポップン（仮）です.</h2>
+  使うキーはz（左）, x（真ん中）, c（右）です。Enterでスタートします。
+
+  <!-- bower:js -->
+  <script src="scripts/jquery-2.1.1.min.js"></script>
+  <!-- <script src="bower_components/modernizr/modernizr.js"></script> -->
+  <!-- endbower -->
+
+  <table id="main">
+    <tr>
+      <td>
+        <div id="space">
+          <canvas id="field"></canvas>
+        </div>
+      </td>
+      <td>
+        <p>max score:<span id="maxPoint">0</span> pts<br>
+          total score:<span id="point">0</span> pts</p>
+          <p>max push:<span id="maxPush">0</span> pts</p> <!-- 1回押したときの最大点数 -->
+          <p>max:<span id="maxCombo">0</span> combo<br>
+            now:<span id="nowCombo">0</span> combo</p>
+            <p><span class="perfect">PERFECT</span>:<span id="stPerfect">0</span><br>
+              <span class="good">GOOD</span>:<span id="stGood">0</span><br>
+              <span class="bad">BAD</span>:<span id="stBad">0</span><br>
+              <span class="miss">MISS</span>:<span id="stMiss">0</span>
+            </p>
+            <p>remain time: <span id="time">30</span>s</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <p id="status">last status</p>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+      <script src="scripts/main.js"></script>
+    </body>
+    </html>
